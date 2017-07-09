@@ -31,11 +31,11 @@ class LinkedList(object):
       current = self.head
       seen = {current.data :True}
       while current.nextNode != None:
-        # is data seen in hash 
+        # data seen in hash 
         if current.nextNode.data in seen:
           current.nextNode = current.nextNode.nextNode
         
-        # else data mot seen in hash
+        # else data not seen in hash
         else:
           seen[current.nextNode.data] = True
           current = current.nextNode
