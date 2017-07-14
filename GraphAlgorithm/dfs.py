@@ -13,7 +13,19 @@ class DeapthFirstSearch(object):
         for n in node.adjacent:
             if not n.visited:
                 self.dfs(n)
+    # without recursion
+    def dfsNoRecursion(self,startData):
+        stack =[]
+        stack.insert(startData)
+        startData.visited = True
 
+        while stack:
+            # pop
+            actual_data = stack.pop()
+            for n in actual_data.adjacent:
+                if not n.visited:
+                    n.visited = True
+                    stack.insert(n)
 
 
 
