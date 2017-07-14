@@ -23,10 +23,11 @@ class BreadthFirstSearch(object):
         queue=[]
         queue.append(node1)
         node1.visited= True
-        # node2.visited = True
 
         while queue:
             data = queue.pop(0)
+            # If this adjacent node is the destination node,
+            # then return true
             if data == node2:
               print("There is a path from", node1.data,"to",node2.data)
               return True
